@@ -1,0 +1,32 @@
+.quote-box {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   top: 20%;
+   width: 85%;
+   max-width: 1000px;
+   transition: all 1s;
+
+   @media only screen and (max-width: $large) {
+      top: 10%;
+   }
+
+   @media only screen and (max-width: $small) {
+      top: 3%;
+   }
+   &__quote {
+      min-height: 22.5rem;
+
+      @media only screen and (max-width: $small) {
+         min-height: 42.5vh;
+      }
+   }
+
+   &__author {
+      height: 7rem;
+   }
+
+   &__buttons {
+      display: flex;
+   }
+}

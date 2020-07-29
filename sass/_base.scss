@@ -1,0 +1,47 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   background-image: url(../images/parchment-background.jpg);
+   background-size: cover;
+   background-position: center top;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   position: relative;
+   height: 100vh;
+}
+
+.quote-box {
+   font-family: "Tangerine", cursive;
+   &__quote {
+      font-size: 12rem;
+      font-weight: 700;
+      line-height: 7.5rem;
+
+      @media only screen and (max-width: $medium) {
+         font-size: 10rem;
+      }
+
+      @media only screen and (max-width: $small) {
+         font-size: 7.5rem;
+      }
+   }
+
+   &__author {
+      font-size: 11rem;
+      text-align: right;
+      font-family: "Tangerine", cursive;
+
+      @media only screen and (max-width: $medium) {
+         font-size: 8rem;
+      }
+
+      @media only screen and (max-width: $small) {
+         font-size: 6rem;
+      }
+   }
+}

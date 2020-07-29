@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <link rel="stylesheet" href="styles/style.css" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Marck+Script&family=Tangerine:wght@400;700&display=swap" rel="stylesheet" />
+      <title>Random Quote Machine</title>
+   </head>
+   <body>
+      <main class="quote-box" id="quote-box">
+         <div class="quote-box__quote">
+            <transition name="slide-fade">
+               <h1 class="quote-box__quote--text" v-if="show" id="text">
+                  {{quote}}
+               </h1>
+            </transition>
+         </div>
+         <div class="quote-box__author">
+            <Transition name="fade-in">
+               <p v-if="show" class="quote-box__author--text" id="author">~ {{author ? author : 'Unknown origin'}}</p>
+            </Transition>
+         </div>
+         <div class="quote-box__buttons">
+            <button @click="getQuote" class="quote-box__buttons--new" id="new-quote">New Quote</button>
+            <a :href="tweet" target="_blank" class="quote-box__buttons--tweet-quote" id="tweet-quote"
+               ><img src="/images/twitter-black-logo.png" alt="Twitter logo" class="quote-box__buttons--twitter"
+            /></a>
+         </div>
+      </main>
+      <script src="scripts/app.js"></script>
+   </body>
+</html>
